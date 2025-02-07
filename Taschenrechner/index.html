@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">Navigation</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Taschenrechner</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/CodeBreaker/index.html">Code Breaker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Schachbrett/chess.html">Schachbrett</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="taschenrechner">
+            <h1>Taschenrechner</h1>
+            <div id="anzeige">
+                <div id="rechenweg"></div>
+                <input id="text_field" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+            </div>
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                <div class="btn-group" role="group" aria-label="Button Group">
+                    <button type="button" onclick="prozent()" class="btn btn-primary">%</button>
+                    <button type="button" onclick="clearTextArea()" class="btn btn-primary">CE</button>
+                    <button type="button" onclick="clearAll()" class="btn btn-primary">C</button>
+                    <button type="button" onclick="removeText()" class="btn btn-primary">⌫</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button Group">
+                    <button type="button" onclick="kehrwert()" class="btn btn-primary">1/x</button>
+                    <button type="button" onclick="quadrat()" class="btn btn-primary">x²</button>
+                    <button type="button" onclick="wurzel()" class="btn btn-primary">&sup2;&radic;x</button>
+                    <button type="button" onclick="insertSymbol('/')" class="btn btn-primary">÷</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button Group">
+                    <button type="button" onclick="insertText('7')" class="btn btn-primary">7</button>
+                    <button type="button" onclick="insertText('8')" class="btn btn-primary">8</button>
+                    <button type="button" onclick="insertText('9')" class="btn btn-primary">9</button>
+                    <button type="button" onclick="insertSymbol('*')" class="btn btn-primary">x</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button Group">
+                    <button type="button" onclick="insertText('4')" class="btn btn-primary">4</button>
+                    <button type="button" onclick="insertText('5')" class="btn btn-primary">5</button>
+                    <button type="button" onclick="insertText('6')" class="btn btn-primary">6</button>
+                    <button type="button" onclick="insertSymbol('-')" class="btn btn-primary">-</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button Group">
+                    <button type="button" onclick="insertText('1')" class="btn btn-primary">1</button>
+                    <button type="button" onclick="insertText('2')" class="btn btn-primary">2</button>
+                    <button type="button" onclick="insertText('3')" class="btn btn-primary">3</button>
+                    <button type="button" onclick="insertSymbol('+')" class="btn btn-primary">+</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button Group">
+                    <button type="button" onclick="plusMinus()" class="btn btn-primary">+/-</button>
+                    <button type="button" onclick="insertText('0')" class="btn btn-primary">0</button>
+                    <button type="button" onclick="insertSymbol('.')" class="btn btn-primary">,</button>
+                    <button type="button" onclick="sum()" class="btn btn-primary">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./taschenrechner.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.auswahl {
+    margin-left: 50%;
+    margin-right: 50%;
+    position: relative;
+    background: rgb(41, 18, 18);
+    border: solid;
+    height: 100px;
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 100px;
+    box-shadow: 15px 15px 15px red;
+    text-align: center;
+}
+
+body {
+background-color: black;
+}
+
+::placeholder {
+    color: rgb(221, 255, 0);
+}
+
+.neueRunde {
+    color: yellow;
+    font-size: 20px;
+    background: #011433;
+    border-radius: 20px;
+    width: 750px;
+    height: 200px;
+    border: 20px solid rgb(102, 3, 3);
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: inset 20px 10px 15px rgb(2, 17, 32);
+    cursor: pointer;
+}
+
+.auswahlen {
+    width: 500px;
+    height: 200px;
+    margin: 1px auto;
+    text-align: center;
+}
+
+#hint {
+    font-size: 15px;
+}
+
+.control {
+    width: 500px;
+    height: 200px;
+    margin: 1px auto;
+    text-align: center;
+}
+
+.auswahlControl {
+    position: relative;
+    text-align: center;
+    background: #2f3769;
+    border: solid;
+    height: 70px;
+    width: 70px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 25px;
+    box-shadow: 15px 15px 15px rgb(163, 232, 0);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#reset:hover {
+    background-color: red;
+}
+
+#next:hover {
+    background-color: red;
+}
+
+#next {
+    float: right;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#reset {
+    float: left;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
